@@ -1,41 +1,25 @@
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 import os
+import toml
 
-
-def new_crc_menu():
-    opt = 2
-    print("What do you want to do now?")
-    print("1. Create new CRC card.")
-    print("2. Exit.")
-
-    return int(input())
-
-def new_class():
-    class_name = ""
-    class_name = input("Class name:")
-    class_head = img = Image.new('RGB', (720, 30), (225,225,225))
-    hack_fnt = "ttf"
-
-def new_sub_line():
-    res = ""
-    collab=""
-    res = input("Responsibility:")
-    collab = input("Collaborator:")
-
+font = ImageFont.truetype("Hack-Regular.ttf", size=16)
 def main():
-    opt = 2
-    opt = new_crc_menu()
-    sub_opt=1
-    while opt != 2:
-        if not os.path.exists('crc'):
-            os.path.mkdir('crc')
-        else:
-            img = Image.new('RGB', (720, 30), (225,225,225))
-            img.save("crc.jpg")
-        new_class()
-        while sub_opt != 2:
-           new_sub_line()
-    opt = new_crc_menu()
+    try:
+        classes = toml.load("crc_classes.toml")
+        for i in classes:
+            create_crc_card(classes[i], i)
+    except Exception as e:
+        print(e)
+        
+def create_crc_card(c:dict, s:str):
+    if not os.path.exists('crc'):
+            os.mkdir('crc')
+    class_head = Image.new('RGB', (1000,100), (225,225,225)) 
+    draw = ImageDraw.Draw(class_head)
+    draw.line((0, class_head.size[1])+class_head.size, fill = 250)
+    class_head.save("crc/"+s+".jpg", 'JPEG')
+
+    
 
 
 if __name__ == "__main__":
