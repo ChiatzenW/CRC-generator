@@ -4,7 +4,7 @@
 
 Modify the crc_classes.toml to change the source. 
 
-Add a new section for a new class. Then follow the format "responsibility"="collaborator"
+Add a new section for a new class. Then follow the format "responsibility"="collaborator \n another collaborator"
 
 Run the python file to generate jpgs. They should be stored in a folder named "crc".
 
@@ -13,7 +13,8 @@ Run the python file to generate jpgs. They should be stored in a folder named "c
 ```toml
 [class1]
 "responsibility" = "collaborator"
-"store some data" = "le_database"
+"store some data" = "le_database \n asdsad \n sadsad"
+"veeeeeeeeeeeeeeeeeeeeeeeerrrrrrrrrrrrrrrrrrrryloooooooooooooong"="dsa \n sad"
 ```
 
 <img src="crc\class1.jpg"  />
