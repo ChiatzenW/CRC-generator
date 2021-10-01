@@ -23,7 +23,7 @@ def fit_font_size(s:str, sizes:(int,int)):
     s=cut(s)
     font_size=1
     font = ImageFont.truetype("Hack-Regular.ttf", size=1)
-    while font.getsize(s)[0]<sizes[0]*(0.65) and font.getsize(s)[1]<sizes[1]*(0.90):
+    while font.getsize(s)[0]<sizes[0]*(0.65) and font.getsize(s)[1]<sizes[1]*(0.80):
         font_size+=1
         font = ImageFont.truetype("Hack-Regular.ttf", font_size)
     return font
