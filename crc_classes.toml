@@ -1,6 +1,6 @@
 [class1]
 responsibility = "collaborator"
-res = "collab"
+"store some data" = "le_database"
 [class2]
-re="colla"
+"tell a joke"="some joke class"
 r="c"
