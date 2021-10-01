@@ -1,8 +1,8 @@
- # Generate CRC model image from prompt inputs.
+ # Generate CRC model image from toml source.
 
 ## Usage:
 
-Modify the toml file to change the source. 
+Modify the crc_classes.toml to change the source. 
 
 Add a new section for a new class. Then follow the format "responsibility"="collaborator"
 
