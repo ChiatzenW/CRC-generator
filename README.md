@@ -14,7 +14,7 @@ Run the python file to generate jpgs. They should be stored in a folder named "c
 [class1]
 "responsibility" = "collaborator"
 "store some data" = "le_database \n asdsad \n sadsad"
-"veeeeeeeeeeeeeeeeeeeeeeeerrrrrrrrrrrrrrrrrrrryloooooooooooooong"="dsa \n sad"
+"take some trash get out and buy food home"="trashcan \n money \n food"
 ```
 
 <img src="crc\class1.jpg"  />

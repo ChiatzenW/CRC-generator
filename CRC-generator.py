@@ -11,9 +11,10 @@ def vertical_merge(im1:Image, im2:Image):
     return merged
 
 def cut(s:str):
-    for i in range(int((len(s)-(len(s)%30))/30)):
-        s_1=s[:(i*30+2*i)]
-        s_2=s[(i*30+2*i):]
+    size=50
+    for i in range(int((len(s)-(len(s)%size))/size)):
+        s_1=s[:(i*size+2*i)]
+        s_2=s[(i*size+2*i):]
         s=s_1+"\n"+s_2
     return s
 
@@ -22,7 +23,7 @@ def fit_font_size(s:str, sizes:(int,int)):
     s=cut(s)
     font_size=1
     font = ImageFont.truetype("Hack-Regular.ttf", size=1)
-    while font.getsize(s)[0]<sizes[0]*(0.80) and font.getsize(s)[1]<sizes[1]*(0.80):
+    while font.getsize(s)[0]<sizes[0]*(0.65) and font.getsize(s)[1]<sizes[1]*(0.90):
         font_size+=1
         font = ImageFont.truetype("Hack-Regular.ttf", font_size)
     return font
