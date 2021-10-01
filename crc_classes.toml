@@ -1,6 +1,6 @@
 [class1]
-responsibility = "collaborator"
+"responsibility" = "collaborator"
 "store some data" = "le_database"
 [class2]
 "tell a joke"="some joke class"
-r="c"
+"r"="c"
